@@ -28,11 +28,10 @@
     <!-- Background Image -->
     <ul class="cb-slideshow">
         <li><span>Image 01</span></li>
-        <!-- <li><span>Image 02</span><div><h3>com·po·sure</h3></div></li>
-            <li><span>Image 03</span><div><h3>e·qua·nim·i·ty</h3></div></li>
-            <li><span>Image 04</span><div><h3>bal·ance</h3></div></li>
-            <li><span>Image 05</span><div><h3>qui·e·tude</h3></div></li>
-            <li><span>Image 06</span><div><h3>re·lax·a·tion</h3></div></li> -->
+        <!-- <li>
+                <span>Image 02</span>
+                <div><h3>com·po·sure</h3></div>
+            </li> -->
     </ul>
 
     <!-- Header -->
@@ -53,109 +52,12 @@
     </header>
 
     <div class="container">
-
-        <!-- Intro -->
-        <div class="row intro">
-            <section class="nine columns">
-                <h2>Bem vindo à página da OC Videos®</h2>
-                <p>O meu nome é Óscar Chaves, estudei Som e Imagem na Universidade Católica Portuguesa, vivo no Porto e adoro idealizar e criar os meus próprios vídeos. Alguns dos meus trabalhos foram realizados em eventos de empresas como Prio, Sonae, Câmara
-                    Municipal de Gaia, Sodecia e Team Building. Procuro acima de tudo captar a essência de cada momento para que as pessoas se possam rever no resultado final.</p>
-
-                <p>Contacte-me se tiver um projecto que queira ver transformado num pequeno filme.</p>
-
-                <a href="mailto:info@ocvideos.pt">
-                    <i class="fa fa-envelope"></i>info@ocvideos.pt
-                </a>
-            </section>
-        </div>
-
-        <!-- Work -->
-        <div class="work">
-            <div class="row">
-                <section class="four columns">
-                    <a href="https://vimeo.com/140846726" target="_blank" title="Be Prio 2015 (Teaser)"> <img src="img/work_08.jpg">
-                        <h2>Be Prio 2015 (Teaser)</h2>
-                        <p>Evento da PRIO, na Quinta das Lágrimas em Coimbra, organizado pela TEAM BUILDING.</p>
-                    </a>
-                </section>
-
-                <section class="four columns">
-                    <a href="https://vimeo.com/142559491" target="_blank" title="Gramido">
-                        <img src="img/work_09.jpg">
-                        <h2>Gramido</h2>
-                        <p>Um passeio na margem do rio Douro em Gramido, Gondomar.</p>
-                    </a>
-                </section>
-
-                <section class="four columns">
-                    <a href="https://vimeo.com/140141038" target="_blank" title="Primeira Comunhão"> <img src="img/work_07.jpg">
-                        <h2>Primeira Comunhão</h2>
-                        <p>Cerimónia da Primeira Comunhão no Mosteiro do Divino Salvador de Moreira.</p>
-                    </a>
-
-                </section>
-            </div>
-
-            <div class="row">
-                <section class="four columns">
-                    <a href="https://vimeo.com/137212859" target="_blank" title="Sonae Tlantic Team Cooking">
-                        <img src="img/work_06.jpg">
-                        <h2>Sonae/Tlantic - Team Cooking</h2>
-                        <p>Evento das empresas SONAE e TLANTIC organizado pela TEAM BUILDING.</p>
-                    </a>
-                </section>
-                <section class="four columns">
-                    <a href="https://vimeo.com/137959986" target="_blank" target="_blank" title="Firmo Team Experience">
-                        <img src="img/work_03.jpg">
-                        <h2>Firmo - Team Experience</h2>
-                        <p>Evento da FIRMO, na Fundação Dr. António Cupertino de Miranda/Museu do Papel Moeda, organizado pela TEAM BUILDING com palestra do Prof. Dr. Jorge Sequeira.</p>
-                    </a>
-                </section>
-
-                <section class="four columns">
-                    <a href="https://www.youtube.com/watch?v=q_ACHv_EHDI" target="_blank">
-                        <img src="img/work_01.jpg">
-                        <h2>Team Building - Palestra</h2>
-                        <p>A palestra dada no auditório municipal de Vila Nova de Gaia, pelo Prof. Dr. Jorge Sequeira, teve como tema "Fúria de Vencer".</p>
-                    </a>
-                </section>
-            </div>
-
-            <div class="row">
-                <section class="four columns">
-                    <a href="https://vimeo.com/137212859" target="_blank" title="Sonae Tlantic Team Cooking">
-                        <img src="img/work_06.jpg">
-                        <h2>Sonae/Tlantic - Team Cooking</h2>
-                        <p>Evento das empresas SONAE e TLANTIC organizado pela TEAM BUILDING.</p>
-                    </a>
-                </section>
-                <section class="four columns">
-                    <a href="https://vimeo.com/137959986" target="_blank" target="_blank" title="Firmo Team Experience">
-                        <img src="img/work_03.jpg">
-                        <h2>Firmo - Team Experience</h2>
-                        <p>Evento da FIRMO, na Fundação Dr. António Cupertino de Miranda/Museu do Papel Moeda, organizado pela TEAM BUILDING com palestra do Prof. Dr. Jorge Sequeira.</p>
-                    </a>
-                </section>
-
-                <section class="four columns">
-                    <a href="https://www.youtube.com/watch?v=q_ACHv_EHDI" target="_blank">
-                        <img src="img/work_01.jpg">
-                        <h2>Team Building - Palestra</h2>
-                        <p>A palestra dada no auditório municipal de Vila Nova de Gaia, pelo Prof. Dr. Jorge Sequeira, teve como tema "Fúria de Vencer".</p>
-                    </a>
-                </section>
-            </div>
-
-        </div>
-
-        <footer class="u-full-width">
-            <small>Óscar Chaves ® 2016 All Rights Reserved</small>
-        </footer>
-
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>
             window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
         </script>
+        <script src="js/handlebars.runtime.js"></script>
+        <script src="js/templates.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
