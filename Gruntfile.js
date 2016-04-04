@@ -8,10 +8,18 @@ module.exports = function(grunt) {
       scripts:    'public/js',
       data:       'public/data'
     },
+    express: {
+        dev: {
+            options: {
+                port: 8080,
+                script: 'index.js',
+            }
+        }
+    },
     handlebars: {
         all: {
             files: {
-                '<%= dirs.scripts %>/templates.js': ['<%= dirs.templates %>/intro.handlebars', '<%= dirs.templates %>/project.handlebars', '<%= dirs.templates %>/footer.handlebars']
+                '<%= dirs.scripts %>/templates.js': '<%= dirs.templates %>/**.handlebars'
 
             }
         }
@@ -31,19 +39,30 @@ module.exports = function(grunt) {
             tasks: ['sass'],
             options: {
                 spawn: false,
-                livereload: true
+                livereload: {
+                    host: 'localhost',
+                    port: 9000,
+                }
             }
         },
         handlebars: {
             files: ['<%= dirs.templates %>/**.handlebars'],
             tasks: ['handlebars:all']
+        },
+        express: {
+            files:   ['<%= dirs.scripts %>/**.js'],
+            tasks:   ['express:dev'],
+            options: {
+                spawn: false
+            }
         }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-handlebars-compiler');
+  grunt.loadNpmTasks('grunt-express-server');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('dev', ['watch']);
+  grunt.registerTask('dev', ['express:dev', 'watch']);
 }
