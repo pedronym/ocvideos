@@ -1,0 +1,25 @@
+{
+  "name": "OCVideos",
+  "description": "Simple one page html website for Óscar Chaves video production company OC Videos®",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Pedro Lima©2016 - pedronym@gmail.com"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/pedronym/ocvideos",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton-sass": "^2.5.2",
+    "umbrella": "^2.0.1"
+  }
+}

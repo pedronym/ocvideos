@@ -1,0 +1,52 @@
+{
+    "projects": [
+        {
+            "title": "Be Prio 2015 (Teaser)",
+            "description": "Evento da PRIO, na Quinta das Lágrimas em Coimbra, organizado pela TEAM BUILDING.",
+            "thumbnail": "img/work_08.jpg",
+            "link": "https://vimeo.com/140846726"
+        },
+        {
+            "title": "Gramido",
+            "description": "Um passeio na margem do rio Douro em Gramido, Gondomar.",
+            "thumbnail": "img/work_09.jpg",
+            "link": "https://vimeo.com/142559491"
+        },
+        {
+            "title": "Primeira Comunhão",
+            "description": "Cerimónia da Primeira Comunhão no Mosteiro do Divino Salvador de Moreira.",
+            "thumbnail": "img/work_07.jpg",
+            "link": "https://vimeo.com/140141038"
+        },
+        {
+            "title": "A Beer and a View",
+            "description": "Um excelente sitio para relaxar com uma vista fantástica.",
+            "thumbnail": "img/work_11.jpg",
+            "link": "https://vimeo.com/160695669"
+        },
+        {
+            "title": "Maia",
+            "description": "Um pequeno passeio no centro da Maia.",
+            "thumbnail": "img/work_10.jpg",
+            "link": "https://vimeo.com/160194121"
+        },
+        {
+            "title": "Firmo Team Experience",
+            "description": "Evento da FIRMO, na Fundação Dr. António Cupertino de Miranda/Museu do Papel Moeda, organizado pela TEAM BUILDING com palestra do Prof. Dr. Jorge Sequeira.",
+            "thumbnail": "img/work_03.jpg",
+            "link": "https://vimeo.com/137959986"
+        },
+        {
+            "title": "Sonae/Tlantic - Team Cooking",
+            "description": "Evento das empresas SONAE e TLANTIC organizado pela TEAM BUILDING.",
+            "thumbnail": "img/work_06.jpg",
+            "link": "https://vimeo.com/137212859"
+        },
+        {
+            "title": "Team Building - Palestra",
+            "description": "A palestra dada no auditório municipal de Vila Nova de Gaia, pelo Prof. Dr. Jorge Sequeira, teve como tema 'Fúria de Vencer'.",
+            "thumbnail": "img/work_01.jpg",
+            "link": "https://www.youtube.com/watch?v=q_ACHv_EHDI"
+        }
+    ]
+}
