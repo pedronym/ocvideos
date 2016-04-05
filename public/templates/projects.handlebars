@@ -1,14 +1,16 @@
 <!-- Work -->
-<div class="work">
-    <div class="row">
-        {{#projects}}
-        <section class="four columns">
-            <a href="{{link}}" target="_blank" title="{{title}}">
-                <img src="{{thumbnail}}">
-                <h2>{{title}}</h2>
-                <p>{{description}}</p>
-            </a>
-        </section>
-        {{/projects}}
-    </div>
+<div class="work container">
+    {{#createrow 3 projects}}
+        <div class="row">
+            {{#each this }}
+            <section class="four columns project">
+                <a href="{{link}}" target="_blank" title="{{title}}">
+                    <img src="{{thumbnail}}">
+                    <h2>{{title}}</h2>
+                    <p>{{description}}</p>
+                </a>
+            </section>
+            {{/each}}
+        </div>
+    {{/createrow}}
 </div>

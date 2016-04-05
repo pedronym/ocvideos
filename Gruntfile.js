@@ -20,7 +20,6 @@ module.exports = function(grunt) {
         all: {
             files: {
                 '<%= dirs.scripts %>/templates.js': '<%= dirs.templates %>/**.handlebars'
-
             }
         }
     },
@@ -37,8 +36,8 @@ module.exports = function(grunt) {
         sass: {
             files: ['<%= dirs.sass %>/**.scss'],
             tasks: ['sass'],
+            spawn: false,
             options: {
-                spawn: false,
                 livereload: {
                     host: 'localhost',
                     port: 9000,
@@ -59,7 +58,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-handlebars-compiler');
   grunt.loadNpmTasks('grunt-express-server');
   grunt.loadNpmTasks('grunt-contrib-watch');
