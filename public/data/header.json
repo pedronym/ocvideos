@@ -1,0 +1,26 @@
+{
+    "title": "Óscar Chaves - Produção de Vídeos",
+    "logo": "img/oc_logo.png",
+    "social": [
+        {
+            "class": "youtube",
+            "icon": "fa fa-youtube-play",
+            "link": "https://www.youtube.com/channel/UCaZTRJe21SZ2kc8uzp1RYbQ"
+        },
+        {
+            "class": "facebook",
+            "icon": "fa fa-facebook-square",
+            "link": "https://www.facebook.com/ocvideos"
+        },
+        {
+            "class": "vimeo",
+            "icon": "fa fa-vimeo-square",
+            "link": "https://vimeo.com/ocvideos"
+        },
+        {
+            "class": "linkedin",
+            "icon": "fa fa-linkedin-square",
+            "link": "https://pt.linkedin.com/pub/óscar-chaves/a5/aa1/440/en"
+        }
+    ]
+}
