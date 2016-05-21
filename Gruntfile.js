@@ -11,8 +11,7 @@ module.exports = function(grunt) {
     express: {
         dev: {
             options: {
-                port: 8080,
-                script: 'index.js',
+                script: 'index.js'
             }
         }
     },
@@ -28,12 +27,14 @@ module.exports = function(grunt) {
             sourcemap: true,
             style: 'expanded'
         },
-        files: {
-            '<%= dirs.css %>/main.css': '<%= dirs.sass %>/main.scss'
+        dev: {
+            files: {
+                '<%= dirs.css %>/main.css': '<%= dirs.sass %>/main.scss'
+            }
         }
     },
     watch: {
-        sass: {
+        styles: {
             files: ['<%= dirs.sass %>/**.scss'],
             tasks: ['sass'],
             spawn: false,
