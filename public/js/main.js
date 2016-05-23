@@ -52,8 +52,8 @@
 		});
 	}
 
+	// Opens the video modal overlay //
 	function openOverlay (e){
-		console.log('Opening Overlay');
 		e.preventDefault();
 
 		var el  = e.currentTarget,
@@ -69,14 +69,15 @@
 		});
 	}
 
+	// Closes the video modal overlay //
 	function closeOverlay (e){
-		console.log('Closing Overlay');
 		close.off('click');
 		body.removeClass('overlay');
 		overlay.removeClass('show');
 		showcase.find('iframe').remove();
 	}
 
+	// Generates the YouTube/Vimeo iframe embed //
 	function generateEmbed(url) {
 		var embed = '';
 
