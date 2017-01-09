@@ -24,12 +24,13 @@ module.exports = function(grunt) {
     },
     sass: {
         options: {
-            sourcemap: true,
-            style: 'expanded'
+            sourceMap: true
         },
         dev: {
-            files: {
-                '<%= dirs.css %>/main.css': '<%= dirs.sass %>/main.scss'
+            dist: {
+                files: {
+                    '<%= dirs.css %>/main.css': '<%= dirs.sass %>/main.scss'
+                }
             }
         }
     },
@@ -41,7 +42,7 @@ module.exports = function(grunt) {
             options: {
                 livereload: {
                     host: 'localhost',
-                    port: 9000,
+                    port: 8090,
                 }
             }
         },
@@ -64,5 +65,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-express-server');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
+  grunt.registerTask('build', ['sass', 'handlebars']);
   grunt.registerTask('dev', ['express:dev', 'watch']);
 }

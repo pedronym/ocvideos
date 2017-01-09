@@ -1,7 +1,7 @@
 (function() {
 var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
 templates['footer'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<footer class=\"u-full-width\">\n    <small>Óscar Chaves ® 2016 All Rights Reserved</small>\n</footer>\n";
+    return "<footer class=\"u-full-width\">\n    <section class=\"container\">\n        <small class=\"twelve columns\">Óscar Chaves ® 2016 All Rights Reserved</small>\n    </section>\n</footer>\n";
 },"useData":true});
 
 templates['header'] = template({"1":function(container,depth0,helpers,partials,data) {
@@ -30,11 +30,11 @@ templates['header'] = template({"1":function(container,depth0,helpers,partials,d
 templates['intro'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=container.escapeExpression;
 
-  return "<!-- Intro -->\n<div class=\"container intro\">\n    <div class=\"row\">\n        <section class=\"nine columns\">\n            <h2>"
+  return "<!-- Intro -->\n<div class=\"container intro\">\n    <div class=\"row\">\n        <section class=\"twelve columns\">\n            <h2>"
     + alias3(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
     + "</h2>\n\n            "
     + ((stack1 = ((helper = (helper = helpers.text || (depth0 != null ? depth0.text : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"text","hash":{},"data":data}) : helper))) != null ? stack1 : "")
-    + "\n\n            <a href=\"mailto:"
+    + "\n\n            <a class=\"button\" href=\"mailto:"
     + alias3(((helper = (helper = helpers.email || (depth0 != null ? depth0.email : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"email","hash":{},"data":data}) : helper)))
     + "\">\n                <i class=\"fa fa-envelope\"></i>"
     + alias3(((helper = (helper = helpers.email || (depth0 != null ? depth0.email : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"email","hash":{},"data":data}) : helper)))
@@ -64,7 +64,9 @@ templates['projects'] = template({"1":function(container,depth0,helpers,partials
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1;
 
-  return "<!-- Work -->\n<div class=\"work container\">\n"
+  return "<!-- Work -->\n<div class=\"work container\">\n\n    <div class=\"row\">\n        <div class=\"highlight-wrapper\">\n            <img class=\"highlight-ratio\" src=\"http://placehold.it/16x9\"/>\n            <iframe class=\"highlight-iframe\" src=\""
+    + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.highlight : depth0)) != null ? stack1.link : stack1), depth0))
+    + "?color=ffffff&title=0&byline=0&portrait=0\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\n        </div>\n    </div>\n\n"
     + ((stack1 = (helpers.createrow || (depth0 && depth0.createrow) || helpers.helperMissing).call(depth0,3,(depth0 != null ? depth0.projects : depth0),{"name":"createrow","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "</div>\n";
 },"useData":true});

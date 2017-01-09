@@ -2,13 +2,13 @@
 @import "slideshow";
 
 /* COLORS */
-$black: #010101;
+$black: yellow;
 $black-transparent: rgba(0, 11, 0, 0.6);
 $darkest: #111111;
 $dark: #444444;
 $lightest: #DDDDDD;
 
-$highlight: #6aaadb;
+$highlight: #ea1d34;
 
 $youtube: #bb0000;
 $facebook: #3b5998;
@@ -20,15 +20,32 @@ html, body {
 	height: 100%;
 }
 
+// a, a:visited {
+// 	color: $link-color;
+// 	text-decoration: $link-decoration;
+// }
+//
+// a:hover, a:focus, a:active { color: $link-hover; }
+
+a, a:visited {
+	color: $lightest;
+}
+
+a:hover, a:focus, a:active {
+	color: $highlight;
+}
+
 body {
 	position: relative;
 	color: white;
 	background-color: $darkest;
 
-	font-family: 'Lato', sans-serif;
+	font-family: 'Raleway', Helvetica, arial, sans-serif;
 
-	overflow-y: scroll;
-	overflow-x: hidden;
+	width: 100%;
+    height: 100%;
+
+	overflow-y: auto;
 
 	&.overlay {
 		overflow-y: hidden;
@@ -62,37 +79,69 @@ header {
 	p {
 		margin: 0;
 		padding: 0;
-		font-size: 1em;
-		line-height: 3.5em;
+		font-size: 0.8em;
+   		line-height: 4.4em;
 		text-align: left;
-		font-weight: 100;
+		font-weight: 600;
+	}
+}
+
+.social-links-item {
+	margin: 0;
+	padding: 1em;
+	cursor: pointer;
+	width: 25%;
+	transition: background-color 0.15s linear;
+
+	&:link, :visited {
+		color: $lightest;
 	}
 
-	@media (max-width: $tablet-width - 1) {
-		p {
-			font-size: 1.3em;
-			line-height: 2.7em;
+	&:hover, :focus, :active {
+		color: $lightest;
+	}
+
+	&.youtube {
+		&:hover{
+			background-color: $youtube;
+		}
+	}
+
+	&.facebook {
+		&:hover{
+			background-color: $facebook;
+		}
+	}
+
+	&.vimeo {
+		&:hover{
+			background-color: $vimeo;
+		}
+	}
+
+	&.linkedin {
+		&:hover{
+			background-color: $linkedin;
 		}
 	}
 }
 
 h2 {
 	color: white;
-	font-size: 3.2rem;
+	font-size: 4.2rem;
 }
 
 .intro {
-	margin-top: 3em;
-	text-align: left;
+	margin-top: 4em;
+	text-align: justify;
 
 	a {
-		color: $highlight;
+		transition: color 0.15s linear;
 		text-decoration: none;
+	}
 
-		&:hover {
-			color: $lightest;
-			transition: color 0.15s linear;
-		}
+	p {
+		font-size: 1.6rem;
 	}
 
 	p:last-of-type {
@@ -102,10 +151,32 @@ h2 {
 	.fa {
 		margin-right: 5px;
 	}
+
+	.button {
+		margin-top: 2rem;
+	}
 }
+
+.button {
+	&:link, :visited {
+		border-radius: 0;
+		border: 0;
+		background-color: $lightest;
+		color: $highlight;
+	}
+
+	&:hover, :focus, :active {
+		background-color: $highlight;
+		color: $lightest;
+	}
+}
+
 .container {
 	margin-bottom: 3em;
+	padding-left: 1rem;
+    padding-right: 1rem;
 }
+
 .work {
 	margin-top: 3em;
 
@@ -150,20 +221,90 @@ footer {
 	position: relative;
 	z-index: 50;
 	padding: 5px;
-	text-align: center;
+	text-align: left;
+}
+
+
+.bg-video-wrapper {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.bg-video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.bg-video-cover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url('../video/placeholder.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.bg-video-overlay {
+	position: absolute;
+	top: 0; right: 0; left: 0; bottom: 0;
+	background: rgba(0,0,0,0.7);
+}
+
+.highlight-wrapper {
+	position: relative;
+	margin-bottom: 4rem;
+}
+
+.highlight-ratio {
+	display:block;
+	width:100%;
+	height:auto;
+}
+
+.highlight-iframe {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
 }
 
 .video-overlay {
+	position: fixed;
+	top:     0;
+	right:   0;
+	bottom:  0;
+	left:    0;
+	width: 	 100%;
+	height:  100%;
+	display: none;
+	z-index: 999;
 
 	.showcase {
 		z-index: 1;
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		top: 0; right: 0; bottom: 0; left: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 
 		iframe {
-			transform: translateX(50%) translateY(60%);
+			width: 80%;
+			height: 45%;
+			transform: translate(-50%, -50%);
+			position: relative;
+			top: 50%;
+			left: 50%;
 		}
 	}
 
@@ -172,11 +313,6 @@ footer {
 		background-color: black;
 		width: 100%;
 		height: 100%;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
 	}
 
 	&.show {
@@ -193,52 +329,6 @@ footer {
 		i {
 			font-size: 3rem;
 			color: white;
-		}
-	}
-
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	display: none;
-	z-index: 999;
-}
-
-.social-links-item {
-	margin: 0;
-	padding: 1em;
-	cursor: pointer;
-	width: 25%;
-
-	color: $lightest;
-	transition: background-color 0.15s linear;
-
-	&.youtube {
-		&:hover{
-			color: $lightest;
-			background-color: $youtube;
-		}
-	}
-
-	&.facebook {
-		&:hover{
-			color: $lightest;
-			background-color: $facebook;
-		}
-	}
-
-	&.vimeo {
-		&:hover{
-			color: $lightest;
-			background-color: $vimeo;
-		}
-	}
-
-	&.linkedin {
-		&:hover{
-			color: $lightest;
-			background-color: $linkedin;
 		}
 	}
 }
