@@ -1,4 +1,4 @@
-{
+﻿{
     "highlight": {
         "link": "https://player.vimeo.com/video/198502212"
     },
@@ -6,8 +6,14 @@
         {
             "title": "A Beer and a View",
             "description": "Um excelente sitio para relaxar com uma vista fantástica.",
-            "thumbnail": "img/work_11.jpg",
+            "thumbnail": "img/work_13.jpg",
             "link": "https://vimeo.com/160695669"
+        },
+        {
+            "title": "Miguel, Patrícia e Sara",
+            "description": "Casamento de Miguel e Patrícia e o baptizado da sua filha Sara na Igreja do Bom Jesus em Braga.",
+            "thumbnail": "img/work_12.jpg",
+            "link": "https://vimeo.com/175883676"
         },
         {
             "title": "Be Prio 2015 (Teaser)",
@@ -22,28 +28,16 @@
             "link": "https://vimeo.com/142559491"
         },
         {
-            "title": "Primeira Comunhão",
-            "description": "Cerimónia da Primeira Comunhão no Mosteiro do Divino Salvador de Moreira.",
-            "thumbnail": "img/work_07.jpg",
-            "link": "https://vimeo.com/140141038"
-        },
-        {
-            "title": "Miguel, Patrícia e Sara",
-            "description": "Casamento de Miguel e Patrícia e o baptizado da sua filha Sara na Igreja do Bom Jesus em Braga.",
-            "thumbnail": "img/work_12.jpg",
-            "link": "https://vimeo.com/175883676"
-        },
-        {
             "title": "Maia",
             "description": "Um pequeno passeio no centro da Maia.",
             "thumbnail": "img/work_10.jpg",
             "link": "https://vimeo.com/160194121"
         },
         {
-            "title": "Firmo Team Experience",
-            "description": "Evento da FIRMO, na Fundação Dr. António Cupertino de Miranda/Museu do Papel Moeda, organizado pela TEAM BUILDING com palestra do Prof. Dr. Jorge Sequeira.",
-            "thumbnail": "img/work_03.jpg",
-            "link": "https://vimeo.com/137959986"
+            "title": "Primeira Comunhão",
+            "description": "Cerimónia da Primeira Comunhão no Mosteiro do Divino Salvador de Moreira.",
+            "thumbnail": "img/work_07.jpg",
+            "link": "https://vimeo.com/140141038"
         },
         {
             "title": "Sonae/Tlantic - Team Cooking",
@@ -56,6 +50,12 @@
             "description": "A palestra dada no auditório municipal de Vila Nova de Gaia, pelo Prof. Dr. Jorge Sequeira, teve como tema 'Fúria de Vencer'.",
             "thumbnail": "img/work_01.jpg",
             "link": "https://www.youtube.com/watch?v=q_ACHv_EHDI"
+        },
+         {
+            "title": "Firmo Team Experience",
+            "description": "Evento da FIRMO, na Fundação Dr. António Cupertino de Miranda/Museu do Papel Moeda, organizado pela TEAM BUILDING com palestra do Prof. Dr. Jorge Sequeira.",
+            "thumbnail": "img/work_03.jpg",
+            "link": "https://vimeo.com/137959986"
         }
     ]
 }
